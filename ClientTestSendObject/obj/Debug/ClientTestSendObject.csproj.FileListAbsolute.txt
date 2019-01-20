@@ -1,0 +1,16 @@
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\bin\Debug\ClientTestSendObject.exe.config
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\bin\Debug\ClientTestSendObject.exe
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\bin\Debug\ClientTestSendObject.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\bin\Debug\ServerTestSendObject.exe
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\bin\Debug\TCPObjectSender.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\bin\Debug\ServerTestSendObject.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\bin\Debug\ServerTestSendObject.exe.config
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\bin\Debug\TCPObjectSender.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\obj\Debug\ClientTestSendObject.csprojAssemblyReference.cache
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\obj\Debug\ClientTestSendObject.csproj.CoreCompileInputs.cache
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\obj\Debug\ClientTestSendObject.csproj.CopyComplete
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\obj\Debug\ClientTestSendObject.exe
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ClientTestSendObject\obj\Debug\ClientTestSendObject.pdb

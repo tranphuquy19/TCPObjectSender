@@ -1,0 +1,13 @@
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\bin\Debug\TCPObjectSender.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\bin\Debug\TCPObjectSender.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\obj\Debug\ClientTest.csprojAssemblyReference.cache
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\obj\Debug\ClientTest.csproj.CoreCompileInputs.cache
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\obj\Debug\ConsoleApp2.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ConsoleApp2\obj\Debug\ClientTest.csproj.CopyComplete

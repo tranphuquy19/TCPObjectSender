@@ -1,0 +1,12 @@
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\bin\Debug\TestServer.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\bin\Debug\TestServer.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\bin\Debug\TCPObjectSender.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\bin\Debug\TCPObjectSender.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\obj\Debug\TestServer.csprojAssemblyReference.cache
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\obj\Debug\TestServer.csproj.CoreCompileInputs.cache
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\obj\Debug\TestServer.csproj.CopyComplete
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\obj\Debug\TestServer.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TestServer\obj\Debug\TestServer.pdb
