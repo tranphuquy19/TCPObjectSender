@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>TCPSocketSender</id>
+    <version>1.0.0</version>
+    <authors>tranphuquy19</authors>
+    <owners>tranphuquy19</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <iconUrl>https://cdn6.aptoide.com/imgs/c/d/6/cd622328fcdf41a4dceaaede5e90bc74_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Send Objects through network using TCP Sockets</description>
+    <releaseNotes>First Release.</releaseNotes>
+    <copyright>Copyright 2019 tranphuquy19</copyright>
+    <tags>Socket TCP</tags>
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>

@@ -21,7 +21,7 @@ namespace ServerTestSendObject
         {
             try
             {
-                ObjectServer objectServer = new ObjectServer(16059, 16, true);
+                ObjectServer<Animals> objectServer = new ObjectServer<Animals>(16059, 16, true);
                 objectServer.Init();
                 while (true)
                 {

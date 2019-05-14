@@ -1,0 +1,10 @@
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\bin\Release\TCPObjectSender.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\bin\Release\TCPObjectSender.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\bin\Release\Newtonsoft.Json.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\bin\Release\Newtonsoft.Json.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\bin\Release\Newtonsoft.Json.xml
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\obj\Release\TCPObjectSender.csproj.CoreCompileInputs.cache
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\obj\Release\TCPObjectSender.csproj.CopyComplete
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\obj\Release\TCPObjectSender.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\obj\Release\TCPObjectSender.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\obj\Release\TCPObjectSender.csprojAssemblyReference.cache

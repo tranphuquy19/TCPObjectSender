@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using TCPObjectSender;
 
-namespace TCPObjectServer
+namespace TCPObjectSender
 {
-    public class ObjectClient
+    public class ObjectClient<T>
     {
         public Object Obj { get; set; }
 
@@ -20,7 +20,7 @@ namespace TCPObjectServer
         private Socket socket;
         private IPEndPoint iep;
         private bool debug;
-        private ThreadSocket threadSocket;
+        private ThreadSocket<T> threadSocket;
 
         public ObjectClient() { }
 
@@ -47,14 +47,14 @@ namespace TCPObjectServer
             this.socket.Connect(this.iep);
             if (this.debug == true)
                 Console.WriteLine(this.socket.LocalEndPoint.ToString() + " is connected!");
-            threadSocket = new ThreadSocket(this.socket);
+            threadSocket = new ThreadSocket<T>(this.socket);
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public Queue<Object> ReceiveObject()
+        public Queue<T> ReceiveObject()
         {
             return threadSocket.queueObjReceived;
         }
@@ -63,7 +63,7 @@ namespace TCPObjectServer
         /// 
         /// </summary>
         /// <param name="obj"></param>
-        public void SendObject(Object obj)
+        public void SendObject(T obj)
         {
             if(obj != null)
             {

@@ -10,34 +10,39 @@ using System.Threading;
 
 namespace TCPObjectSender
 {
-    public class ObjectServer
+    public class ObjectServer<T>
     {
-        
 
-        public Object Obj { get; set; }
+
+        public T Obj { get; set; }
 
         public int port { get; set; }
         public int limitClient { get; set; }
 
-        static protected Hashtable listClient = new Hashtable();
+        public Hashtable listClient = new Hashtable();
 
         private Socket socket;
         private IPEndPoint iep;
         private static bool debug;
 
+        ThreadSocket<T> threadDestroy = new ThreadSocket<T>();
+
         private Thread threadInit;
 
-        public ObjectServer() { }
+        public ObjectServer()
+        {
+            threadDestroy.isDestroy = true;
+        }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="data"></param>
-        /// <param name="ipClient"></param>
-        /// <param name="port"></param>
-        /// <param name="limitClient"></param>
+        /// <param name="port">port of Server</param>
+        /// <param name="limitClient">Maximun Client, default is 16 clients at once</param>
+        /// <param name="_debug">Show debug message on Console</param>
         public ObjectServer(int port, int limitClient = 16, bool _debug = false)
         {
+            threadDestroy.isDestroy = true;
             this.port = port;
             this.limitClient = limitClient;
             debug = _debug;
@@ -50,7 +55,7 @@ namespace TCPObjectSender
                 Socket clientSocket = this.socket.Accept();
                 if (debug == true)
                     Console.WriteLine(clientSocket.RemoteEndPoint.ToString() + " is connected!");
-                listClient.Add(clientSocket.RemoteEndPoint.ToString(), new ThreadSocket(clientSocket));
+                listClient.Add(clientSocket.RemoteEndPoint.ToString(), new ThreadSocket<T>(clientSocket, this));
             }
         }
 
@@ -67,7 +72,12 @@ namespace TCPObjectSender
             threadInit.Start();
         }
 
-        public virtual void CustomSend(Object obj, string ipClient)
+        /// <summary>
+        /// Override this method
+        /// </summary>
+        /// <param name="obj">Data of Obj</param>
+        /// <param name="ipClient">ip Address of target client</param>
+        public virtual void CustomSend(T obj, string ipClient)
         {
 
         }
@@ -76,11 +86,11 @@ namespace TCPObjectSender
         /// 
         /// </summary>
         /// <param name="obj"></param>
-        public void SendObjectToAll(Object obj)
+        public void SendObjectToAll(T obj)
         {
-            foreach(ThreadSocket client in listClient.Values)
+            foreach (ThreadSocket<T> client in listClient.Values)
             {
-                if (debug == true)
+                if (debug == true && client.isDestroy == false)
                     Console.WriteLine(client.socket.RemoteEndPoint.ToString() + " was send!");
                 client.ObjToSend = obj;
             }
@@ -91,32 +101,57 @@ namespace TCPObjectSender
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="ipClient"></param>
-        public void SendObjectToIP(Object obj, string ipClient)
+        public void SendObjectToIP(T obj, string ipClient)
         {
-            foreach (ThreadSocket client in listClient)
+            if (listClient.ContainsKey(ipClient))
             {
-                string ip = client.socket.RemoteEndPoint.ToString();
-                if (ip == ipClient)
-                {
-                    Console.WriteLine(ip + " was send!");
-                    client.ObjToSend = obj;
-                    return;
-                }
+                ThreadSocket<T> client = (ThreadSocket<T>)listClient[ipClient];
+                client.ObjToSend = obj;
+                listClient[ipClient] = client;
             }
-            throw new InvalidOperationException("IP of client not found");
+            else
+                throw new InvalidOperationException("IP of client not found");
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        public static Queue<DataPackage> ReceiveObject()
+        public Queue<DataPackage<T>> ReceiveObject()
         {
-            DataPackage package;
-            Queue<DataPackage> list = new Queue<DataPackage>();
-            foreach (ThreadSocket client in listClient)
+            DataPackage<T> package = new DataPackage<T>();
+            Queue<DataPackage<T>> list = new Queue<DataPackage<T>>();
+            #region Debug
+            //try
+            //{
+            //    foreach (ThreadSocket<T> client in listClient.Values)
+            //    {
+            //        if(client == null)
+            //        {
+            //            listClient.Remove(listClient[client.socket.RemoteEndPoint.ToString()]);
+            //        }
+            //        package = new DataPackage<T>();
+            //        if (client.queueObjReceived != null)
+            //        {
+            //            package.ipClient = client.socket.RemoteEndPoint.ToString();
+            //            package.queueData = client.queueObjReceived;
+            //        }
+            //        list.Enqueue(package);
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+            //    Console.WriteLine("from ObjectServer.ReceiveObject()"+e.Message);
+            //    return list;
+            //}
+
+            #endregion
+            
+            foreach (ThreadSocket<T> client in listClient.Values)
             {
-                package = new DataPackage();
+                if (client.isDestroy)
+                    continue;
+                package = new DataPackage<T>();
                 if (client.queueObjReceived != null)
                 {
                     package.ipClient = client.socket.RemoteEndPoint.ToString();
@@ -125,19 +160,19 @@ namespace TCPObjectSender
                 list.Enqueue(package);
             }
             return list;
-        }
 
+        }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="ipClient"></param>
-        public static void RemoveClient(string ipClient)
+        public void RemoveClient(string ipClient)
         {
-            if(debug == true)
+            if (debug == true)
             {
-                Console.WriteLine(ipClient + " is disconnected!");
+                Console.WriteLine(ipClient + " has disconnected!");
             }
-            listClient.Remove(ipClient);
+            listClient[ipClient] = threadDestroy;
         }
     }
 }

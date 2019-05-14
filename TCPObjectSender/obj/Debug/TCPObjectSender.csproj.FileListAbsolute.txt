@@ -1,9 +1,10 @@
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\obj\Debug\TCPObjectSender.csproj.CoreCompileInputs.cache
 C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\bin\Debug\TCPObjectSender.dll
 C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\bin\Debug\TCPObjectSender.pdb
 C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\obj\Debug\TCPObjectSender.csproj.CoreCompileInputs.cache
 C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\obj\Debug\TCPObjectSender.csproj.CopyComplete
 C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\obj\Debug\TCPObjectSender.dll
 C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\obj\Debug\TCPObjectSender.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\TCPObjectSender\obj\Debug\TCPObjectSender.csprojAssemblyReference.cache

@@ -1,0 +1,13 @@
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\bin\Release\ServerTestSendObject.exe.config
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\bin\Release\ServerTestSendObject.exe
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\bin\Release\ServerTestSendObject.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\bin\Release\TCPObjectSender.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\bin\Release\Newtonsoft.Json.dll
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\bin\Release\TCPObjectSender.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\bin\Release\Newtonsoft.Json.pdb
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\bin\Release\Newtonsoft.Json.xml
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\obj\Release\ServerTestSendObject.csprojAssemblyReference.cache
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\obj\Release\ServerTestSendObject.csproj.CoreCompileInputs.cache
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\obj\Release\ServerTestSendObject.csproj.CopyComplete
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\obj\Release\ServerTestSendObject.exe
+C:\Users\Tran Phu Quy\source\repos\TCPObjectSender\ServerTestSendObject\obj\Release\ServerTestSendObject.pdb

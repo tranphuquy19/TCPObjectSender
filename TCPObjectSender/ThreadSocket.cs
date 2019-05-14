@@ -1,32 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net.Sockets;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using static TCPObjectSender.ObjectServer;
 
 namespace TCPObjectSender
 {
-    public struct DataPackage
+    public struct DataPackage<T>
     {
-        public string ipClient;
-        public Queue<Object> queueData;
+        public string ipClient { get; set; }
+        public Queue<T> queueData { get; set; }
     }
-    class ThreadSocket
+    class ThreadSocket<T>
     {
-        public Object ObjToSend { get; set; }
-        public Queue<Object> queueObjReceived { get; set; }
+        public T ObjToSend { get; set; }
+        public Queue<T> queueObjReceived { get; set; }
         public Socket socket { get; set; }
+        public ObjectServer<T> objectServer { get; set; }
+        public bool isDestroy { get; set; }
 
         private Thread send;
         private Thread receive;
 
-        public ThreadSocket(Socket socket)
+        public ThreadSocket(Socket socket, ObjectServer<T> objectServer)
         {
-            queueObjReceived = new Queue<Object>();
+            this.objectServer = objectServer;
+            queueObjReceived = new Queue<T>();
             this.socket = socket;
             send = new Thread(new ThreadStart(SendObject));
             send.Start();
@@ -34,6 +33,20 @@ namespace TCPObjectSender
             receive.Start();
         }
 
+        public ThreadSocket(Socket socket)
+        {
+            queueObjReceived = new Queue<T>();
+            this.socket = socket;
+            send = new Thread(new ThreadStart(SendObject));
+            send.Start();
+            receive = new Thread(new ThreadStart(ReceiveObject));
+            receive.Start();
+        }
+        public ThreadSocket()
+        {
+
+            this.isDestroy = false;
+        }
         private void ReceiveObject()
         {
             NetworkStream networkStream = new NetworkStream(this.socket);
@@ -44,7 +57,7 @@ namespace TCPObjectSender
                 try
                 {
                     objString = streamReader.ReadLine();
-                    this.queueObjReceived.Enqueue(Newtonsoft.Json.JsonConvert.DeserializeObject<Object>(objString));
+                    this.queueObjReceived.Enqueue(Newtonsoft.Json.JsonConvert.DeserializeObject<T>(objString));
                 }
                 catch (Exception)
                 {
@@ -52,11 +65,11 @@ namespace TCPObjectSender
                     streamReader.Close();
                     networkStream.Close();
                     //throw new Exception(this.socket.RemoteEndPoint.ToString());
-                    ObjectServer.RemoveClient(this.socket.RemoteEndPoint.ToString());
+                    objectServer.RemoveClient(this.socket.RemoteEndPoint.ToString());
                     break;
                 }
             }
-            
+
         }
 
         private void SendObject()
@@ -76,7 +89,7 @@ namespace TCPObjectSender
                     break;
                 }
                 streamWriter.Flush();
-                this.ObjToSend = null;
+                this.ObjToSend = default(T);
             }
             streamWriter.Close();
             networkStream.Close();
